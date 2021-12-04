@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Livro;
 
-class ProdutoController extends Controller
+class LivroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        //
+    $produtos = Produto::all();
+        return view('produtos.index', ['produtos' => $produtos]);
     }
 
     /**
@@ -45,7 +47,8 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        $livro=Livro::findOrFail($id);
+        echo 'nomedoproduto:'.$produto->nome;
     }
 
     /**
