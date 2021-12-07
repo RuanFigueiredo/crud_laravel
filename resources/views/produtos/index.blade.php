@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="">
+        @csrf
         <label for="">Nome</label><br/>
         <input type="text" name="nome"><br/>
         <label for="">Preço</label><br/>
