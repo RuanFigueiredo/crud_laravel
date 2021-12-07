@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('produtos', ProdutoController::class);
+Route::post('produtos', 'ProdutoController@store')->name('registrar_produto');
